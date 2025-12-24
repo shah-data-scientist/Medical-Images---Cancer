@@ -1,0 +1,1 @@
+image_path,label,split,image_id,label_name,true_label,weak_label_kmeans,confidence_score,weak_label_kmeans_filtered

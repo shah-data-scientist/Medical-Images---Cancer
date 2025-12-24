@@ -1,0 +1,43 @@
+{
+  "dataset_overview": {
+    "total_images": 1506,
+    "labeled_cancer": 50,
+    "labeled_normal": 50,
+    "unlabeled": 1406,
+    "class_balance_ratio": 1.0
+  },
+  "image_properties": {
+    "cancer": {
+      "dimensions": "512\u00d7512",
+      "mode": "RGB",
+      "channels": 3,
+      "format": "JPEG",
+      "file_size_kb": 25.24
+    },
+    "normal": {
+      "dimensions": "512\u00d7512",
+      "mode": "RGB",
+      "channels": 3,
+      "format": "JPEG",
+      "file_size_kb": 23.0
+    },
+    "unlabeled": {
+      "dimensions": "512\u00d7512",
+      "mode": "RGB",
+      "channels": 3,
+      "format": "JPEG",
+      "file_size_kb": 30.09
+    }
+  },
+  "file_sizes": {
+    "avg_kb": 26.11,
+    "min_kb": 23.0,
+    "max_kb": 30.09
+  },
+  "observations": [
+    "Dataset contains 1506 total images",
+    "Class balance: 1.00 (cancer/normal ratio)",
+    "All images have consistent dimensions: 512\u00d7512",
+    "All images have the same mode: RGB"
+  ]
+}

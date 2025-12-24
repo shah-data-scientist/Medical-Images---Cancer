@@ -1,0 +1,33 @@
+{
+  "model_performance": {
+    "fully_supervised": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "f2_score": 1.0,
+      "roc_auc": 1.0
+    },
+    "semi_supervised": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "f2_score": 1.0,
+      "roc_auc": 1.0
+    }
+  },
+  "scaling_analysis": {
+    "current_cost_per_image": 3.0,
+    "proposed_budget": 5000.0,
+    "target_images": 4000000,
+    "feasible": true,
+    "recommended_strategy": "Hybrid (Expert + Crowdsourcing + Self-Supervised)",
+    "expert_labels_recommended": 5000,
+    "crowdsource_labels_recommended": -33333
+  },
+  "training_time": {
+    "fully_supervised_minutes": 3.881446897983551,
+    "semi_supervised_minutes": 57.82615854740143
+  }
+}

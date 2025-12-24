@@ -1,0 +1,12 @@
+image_path,label,split,image_id
+data\labelled\cancer\cc0ae8e9-036f-4ee9-a4ee-6828120e0ea3.jpg,1,val,cc0ae8e9-036f-4ee9-a4ee-6828120e0ea3
+data\labelled\normal\8e1cc70d-cccd-416c-99a5-df64bcadeb26.jpg,0,val,8e1cc70d-cccd-416c-99a5-df64bcadeb26
+data\labelled\cancer\9973120d-7335-43da-bd9b-3c686afbcf32.jpg,1,val,9973120d-7335-43da-bd9b-3c686afbcf32
+data\labelled\cancer\4d14c944-eed4-4c4f-8fd9-cbbb53e8f35d.jpg,1,val,4d14c944-eed4-4c4f-8fd9-cbbb53e8f35d
+data\labelled\cancer\5066bf9b-d944-4d40-ba06-d3242c7a4fd1.jpg,1,val,5066bf9b-d944-4d40-ba06-d3242c7a4fd1
+data\labelled\normal\9922995f-dc68-4b39-87c8-68e54635ce32.jpg,0,val,9922995f-dc68-4b39-87c8-68e54635ce32
+data\labelled\normal\2794c549-1ec3-4d08-abed-84ccd53791f3.jpg,0,val,2794c549-1ec3-4d08-abed-84ccd53791f3
+data\labelled\cancer\0f718241-8f63-4b55-81ce-315324b51069.jpg,1,val,0f718241-8f63-4b55-81ce-315324b51069
+data\labelled\normal\3c213abc-ab17-4037-a8e5-caa7bc1babe1.jpg,0,val,3c213abc-ab17-4037-a8e5-caa7bc1babe1
+data\labelled\normal\6c861380-76ee-490d-bf28-a0232af08c43.jpg,0,val,6c861380-76ee-490d-bf28-a0232af08c43
+data\labelled\normal\defdbef3-bea2-4f32-9d9a-62af1102ebfd.jpg,0,val,defdbef3-bea2-4f32-9d9a-62af1102ebfd
