@@ -13,7 +13,8 @@
       "Bash(if not exist .vscode mkdir .vscode)",
       "Bash(findstr:*)",
       "Bash(python:*)",
-      "Bash(timeout 300 poetry run jupyter nbconvert:*)"
+      "Bash(timeout 300 poetry run jupyter nbconvert:*)",
+      "Bash(tasklist:*)"
     ]
   }
 }

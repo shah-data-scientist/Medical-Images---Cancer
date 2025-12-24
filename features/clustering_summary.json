@@ -11,6 +11,6 @@
   "n_pca_components": 50,
   "confidence_threshold": 0.9,
   "weak_labels_original": 1406,
-  "weak_labels_high_confidence": 0,
-  "retention_rate": 0.0
+  "weak_labels_high_confidence": 277,
+  "retention_rate": 0.19701280227596016
 }
