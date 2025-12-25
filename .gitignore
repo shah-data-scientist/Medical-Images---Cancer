@@ -10,12 +10,30 @@ ENV/
 # Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+*.backup
+*.log
+cell_*_backup.txt
+backup_cell_*.txt
+
+# Data & Features (Large Files)
+data/
+features/
+*.npy
+*.pth
 
 # MLflow
 mlflow.db
 mlruns/
 mlartifacts/
 
-# OS
+# OS & IDE
 .DS_Store
 Thumbs.db
+.vscode/
+.claude/
+
+# Project Specific
+old_scripts/
+old_notebooks/
+_ul
+_ul-NOUVEAU-MAITRE
