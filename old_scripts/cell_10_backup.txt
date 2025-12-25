@@ -1,0 +1,5 @@
+## 5. Define Model Architecture
+
+We'll use **ResNet50** pretrained on ImageNet:
+- Replace final layer for binary classification
+- Option to freeze/unfreeze layers during training

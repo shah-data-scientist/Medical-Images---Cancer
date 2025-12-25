@@ -1,0 +1,62 @@
+# Define transforms
+train_transform = transforms.Compose([
+    transforms.Resize(256),
+    transforms.RandomCrop(224),
+    transforms.RandomHorizontalFlip(p=0.5),
+    transforms.RandomRotation(degrees=15),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
+
+val_test_transform = transforms.Compose([
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
+
+# Custom Dataset class
+class BrainMRIDataset(Dataset):
+    """
+    PyTorch Dataset for brain MRI images.
+    
+    Args:
+        dataframe: DataFrame with 'image_path' and label column
+        label_col: Name of label column ('true_label' or 'weak_label_kmeans')
+        transform: torchvision transforms
+    """
+    def __init__(self, dataframe, label_col='true_label', transform=None):
+        self.dataframe = dataframe.reset_index(drop=True)
+        self.label_col = label_col
+        self.transform = transform
+    
+    def __len__(self):
+        return len(self.dataframe)
+    
+    def __getitem__(self, idx):
+        img_path = self.dataframe.iloc[idx]['image_path']
+        label = self.dataframe.iloc[idx][self.label_col]
+        
+        # Load image
+        image = Image.open(img_path).convert('RGB')
+        
+        # Apply transforms
+        if self.transform:
+            image = self.transform(image)
+        
+        return image, label
+
+# Create datasets
+train_dataset_strong = BrainMRIDataset(train_df, 'true_label', train_transform)
+val_dataset = BrainMRIDataset(val_df, 'true_label', val_test_transform)
+test_dataset = BrainMRIDataset(test_df, 'true_label', val_test_transform)
+
+# Dataset for weak-labeled pre-training
+train_dataset_weak = BrainMRIDataset(weak_labeled_df, 'weak_label_kmeans', train_transform)
+
+print("✓ Datasets created:")
+print(f"  - Strong-label train: {len(train_dataset_strong)}")
+print(f"  - Validation: {len(val_dataset)}")
+print(f"  - Test: {len(test_dataset)}")
+print(f"  - Weak-label train: {len(train_dataset_weak)}")

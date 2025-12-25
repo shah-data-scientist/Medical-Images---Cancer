@@ -1,0 +1,45 @@
+def create_model(pretrained=True, num_classes=2):
+    """
+    Create ResNet50 model for binary classification.
+    
+    Args:
+        pretrained: Use ImageNet pretrained weights
+        num_classes: Number of output classes (2 for cancer/normal)
+    
+    Returns:
+        model: ResNet50 with modified final layer
+    """
+    # Load pretrained ResNet50
+    model = models.resnet50(pretrained=pretrained)
+    
+    # Get number of features in final layer
+    num_features = model.fc.in_features
+    
+    # Replace final layer
+    model.fc = nn.Sequential(
+        nn.Dropout(0.5),
+        nn.Linear(num_features, num_classes)
+    )
+    
+    return model
+
+def freeze_layers(model, freeze=True):
+    """
+    Freeze or unfreeze convolutional layers.
+    
+    Args:
+        model: PyTorch model
+        freeze: If True, freeze conv layers; else unfreeze
+    """
+    for name, param in model.named_parameters():
+        if 'fc' not in name:  # Don't freeze final layer
+            param.requires_grad = not freeze
+
+# Test model creation
+test_model = create_model()
+print(f"✓ Model architecture defined")
+print(f"  - Base: ResNet50")
+print(f"  - Output classes: 2 (normal/cancer)")
+print(f"  - Total parameters: {sum(p.numel() for p in test_model.parameters()):,}")
+print(f"  - Trainable parameters: {sum(p.numel() for p in test_model.parameters() if p.requires_grad):,}")
+del test_model
