@@ -1,0 +1,9 @@
+{
+  "recommended_scenario": "C",
+  "recommended_labels_to_buy": 200,
+  "recommended_cost": 600,
+  "remaining_budget": 4400,
+  "expected_f2": 0.9892,
+  "expected_recall": 0.9867,
+  "rationale": "Optimal cost-effectiveness with minimal performance trade-off"
+}

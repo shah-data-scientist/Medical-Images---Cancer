@@ -15,7 +15,23 @@
       "Bash(python:*)",
       "Bash(timeout 300 poetry run jupyter nbconvert:*)",
       "Bash(tasklist:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(timeout 180 poetry run jupyter nbconvert:*)",
+      "Bash(move fix_notebook2_markdown_integrity.py old_scripts )",
+      "Bash(move:*)",
+      "Bash(if not exist old_scripts mkdir old_scripts)",
+      "Bash(cat:*)",
+      "Bash(while read f)",
+      "Bash(do mv \"$f\" old_scripts/)",
+      "Bash(echo:*)",
+      "Bash(done)",
+      "Bash(timeout 3600 poetry run jupyter nbconvert --to notebook --execute --inplace 3_semi_supervised_learning.ipynb --ExecutePreprocessor.timeout=3600)",
+      "Bash(git checkout:*)",
+      "Bash(timeout 10 git checkout:*)",
+      "Bash(del /F 3_semi_supervised_learning.ipynb)",
+      "Bash(for file in \"3_semi_supervised_learning.ipynb\" \"3_semi_supervised_learning_restored.ipynb\" \"3_semi_supervised_learning.ipynb.backup\")",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(if not exist old_notebooks mkdir old_notebooks)"
     ]
   }
 }

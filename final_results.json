@@ -14,7 +14,7 @@
       "recall": 1.0,
       "f1_score": 0.8823529411764706,
       "f2_score": 0.9493670886075949,
-      "roc_auc": 0.9733333333333334
+      "roc_auc": 0.9911111111111112
     }
   },
   "scaling_analysis": {
@@ -27,7 +27,7 @@
     "crowdsource_labels_recommended": 6666
   },
   "training_time": {
-    "fully_supervised_minutes": 2.898702319463094,
-    "semi_supervised_minutes": 51.748308555285135
+    "fully_supervised_minutes": 2.028387169043223,
+    "semi_supervised_minutes": 47.015005230903625
   }
 }

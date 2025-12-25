@@ -5,12 +5,12 @@
   "normal_count": 50,
   "cancer_count": 50,
   "kmeans_ari": 0.40405226838937014,
-  "kmeans_silhouette": 0.1189553439617157,
+  "kmeans_silhouette": 0.14741621911525726,
   "weak_label_agreement": 0.82,
-  "pca_variance_explained": 0.7348892092704773,
+  "pca_variance_explained": 0.9799000024795532,
   "n_pca_components": 50,
-  "confidence_threshold": 0.9,
+  "confidence_threshold": 0.266,
   "weak_labels_original": 1406,
-  "weak_labels_high_confidence": 277,
-  "retention_rate": 0.19701280227596016
+  "weak_labels_high_confidence": 282,
+  "retention_rate": 0.20056899004267426
 }

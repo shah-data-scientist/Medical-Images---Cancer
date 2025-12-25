@@ -22,7 +22,8 @@ dependencies = [
     "ipython (>=9.8.0,<10.0.0)",
     "notebook (>=7.5.1,<8.0.0)",
     "ipykernel (>=7.1.0,<8.0.0)",
-    "statsmodels (>=0.14.6,<0.15.0)"
+    "statsmodels (>=0.14.6,<0.15.0)",
+    "mlflow (>=3.8.0,<4.0.0)"
 ]
 
 

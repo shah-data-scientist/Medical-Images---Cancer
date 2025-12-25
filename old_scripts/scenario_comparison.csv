@@ -1,0 +1,5 @@
+Scenario,Name,Additional Labels,Cost,Total Labeled,Estimated F2,Estimated Recall,Cost per F2 point
+A,Fully Supervised Only,1406,4218,1506,0.99,0.99,4260.606060606061
+B,Balanced Approach,500,1500,600,0.9892,0.9867,1516.37687019814
+C,Minimal Labeling,200,600,300,0.9892,0.9867,606.550748079256
+D,No Additional Labeling,0,0,100,0.9892,0.9867,0.0
