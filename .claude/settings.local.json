@@ -14,7 +14,8 @@
       "Bash(findstr:*)",
       "Bash(python:*)",
       "Bash(timeout 300 poetry run jupyter nbconvert:*)",
-      "Bash(tasklist:*)"
+      "Bash(tasklist:*)",
+      "Bash(ls:*)"
     ]
   }
 }

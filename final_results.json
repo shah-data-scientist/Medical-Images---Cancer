@@ -1,20 +1,20 @@
 {
   "model_performance": {
     "fully_supervised": {
-      "accuracy": 1.0,
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1_score": 1.0,
-      "f2_score": 1.0,
-      "roc_auc": 1.0
+      "accuracy": 0.9,
+      "precision": 0.875,
+      "recall": 0.9333333333333333,
+      "f1_score": 0.9032258064516129,
+      "f2_score": 0.9210526315789473,
+      "roc_auc": 0.9333333333333333
     },
     "semi_supervised": {
-      "accuracy": 1.0,
-      "precision": 1.0,
+      "accuracy": 0.8666666666666667,
+      "precision": 0.7894736842105263,
       "recall": 1.0,
-      "f1_score": 1.0,
-      "f2_score": 1.0,
-      "roc_auc": 1.0
+      "f1_score": 0.8823529411764706,
+      "f2_score": 0.9493670886075949,
+      "roc_auc": 0.9733333333333334
     }
   },
   "scaling_analysis": {
@@ -23,11 +23,11 @@
     "target_images": 4000000,
     "feasible": true,
     "recommended_strategy": "Hybrid (Expert + Crowdsourcing + Self-Supervised)",
-    "expert_labels_recommended": 5000,
-    "crowdsource_labels_recommended": -33333
+    "expert_labels_recommended": 1000,
+    "crowdsource_labels_recommended": 6666
   },
   "training_time": {
-    "fully_supervised_minutes": 3.881446897983551,
-    "semi_supervised_minutes": 57.82615854740143
+    "fully_supervised_minutes": 2.898702319463094,
+    "semi_supervised_minutes": 51.748308555285135
   }
 }
