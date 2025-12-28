@@ -17,6 +17,25 @@ Evaluate scaling to **4 million images** with a **€5,000 budget**.
 
 ---
 
+## 📚 **Documentation Hub**
+
+**→ All project documentation is now centralized in [`docs_generated/`](docs_generated/)**
+
+**Quick Links:**
+- ⭐ **[Quick Start Guide](docs_generated/QUICKSTART.md)** - Get running in 5 minutes
+- 📖 **[Complete Documentation Index](docs_generated/00_INDEX.md)** - Master navigation
+- 🏗️ **[System Overview](docs_generated/01_SYSTEM_OVERVIEW.md)** - Architecture & design
+- 🔧 **[How to Run](docs_generated/02_HOW_TO_RUN.md)** - Installation & execution
+- 📊 **[Latest Audit Report](docs_generated/POST_COMMIT_AUDIT_2025-12-28.md)** - Production readiness: 9.2/10
+
+**Why docs_generated/?**
+- ✅ Single source of truth for all documentation
+- ✅ Code-first approach (no documentation drift)
+- ✅ Comprehensive (13 files covering all aspects)
+- ✅ Maintained and up-to-date
+
+---
+
 ## 📁 Project Structure
 
 ```
