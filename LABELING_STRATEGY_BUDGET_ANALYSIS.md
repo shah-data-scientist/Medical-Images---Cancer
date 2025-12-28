@@ -1,3 +1,5 @@
+# NON CODE MARKDOWN
+
 # Labeling Strategy: Budget Analysis & Scale-Up Feasibility
 **Project:** BrainScanAI - Brain Tumor Detection
 **Date:** 2025-12-26

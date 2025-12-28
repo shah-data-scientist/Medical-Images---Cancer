@@ -6,6 +6,22 @@
 
 ---
 
+## 📝 Recent Changes (Newest First)
+
+### 2025-12-26 - Fixed approval request issue (globally)
+**Files:** `C:\Users\shahu\.claude\settings.json` (global), `.claude/settings.local.json` (local)
+**What:** Removed "ask" array from both global and local settings
+**Why:** User was getting approval requests despite granting full permissions
+**Status:** ✅ Complete - Now applies to ALL repositories
+
+### 2025-12-26 - Created local documentation policy
+**Files:** `DOCUMENTATION_POLICY.md`, `docs/00_INDEX.md`
+**What:** Added local policy requiring notebook findings sections
+**Why:** Project requirement for documenting results with uncertainty
+**Status:** ✅ Complete
+
+---
+
 ## 🛠 Progress & Accomplishments
 
 ### 1. Unsupervised Analysis (Notebook 2)
