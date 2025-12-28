@@ -18,6 +18,7 @@ from sklearn.inspection import permutation_importance
 from sklearn.metrics import fbeta_score, accuracy_score, precision_score, recall_score
 import json
 from pathlib import Path
+import mlflow
 
 # Set style
 plt.style.use('seaborn-v0_8-darkgrid')
@@ -118,6 +119,12 @@ def analyze_feature_importance(model, X_test, y_test, n_repeats=30, random_state
 
     plt.tight_layout()
     plt.savefig('feature_importance_analysis.png', dpi=300, bbox_inches='tight')
+    
+    # Log to MLflow
+    if mlflow.active_run():
+        mlflow.log_figure(fig, "feature_importance_analysis.png")
+        print("  -> Logged feature importance plot to MLflow")
+        
     plt.show()
 
     return {
@@ -210,6 +217,12 @@ def visualize_feature_space_tsne(X_train, y_train, X_test, y_test,
 
     plt.tight_layout()
     plt.savefig('tsne_visualization.png', dpi=300, bbox_inches='tight')
+    
+    # Log to MLflow
+    if mlflow.active_run():
+        mlflow.log_figure(fig, "tsne_visualization.png")
+        print("  -> Logged t-SNE plot to MLflow")
+        
     plt.show()
 
     # Calculate separation metrics
@@ -220,6 +233,9 @@ def visualize_feature_space_tsne(X_train, y_train, X_test, y_test,
     centroid_normal = train_normal.mean(axis=0)
     centroid_cancer = train_cancer.mean(axis=0)
     centroid_distance = np.linalg.norm(centroid_normal - centroid_cancer)
+
+    if mlflow.active_run():
+        mlflow.log_metric("tsne_centroid_distance", centroid_distance)
 
     print(f"\nClass Separation Metrics:")
     print(f"  Distance between class centroids: {centroid_distance:.2f}")
@@ -334,6 +350,19 @@ def create_ensemble_predictions(fold_models, X_test, y_test):
 
     plt.tight_layout()
     plt.savefig('ensemble_analysis.png', dpi=300, bbox_inches='tight')
+    
+    # Log to MLflow
+    if mlflow.active_run():
+        mlflow.log_figure(fig, "ensemble_analysis.png")
+        mlflow.log_metrics({
+            "ensemble_f2": ensemble_f2,
+            "ensemble_precision": ensemble_precision,
+            "ensemble_recall": ensemble_recall,
+            "ensemble_accuracy": ensemble_accuracy,
+            "ensemble_improvement": improvement
+        })
+        print("  -> Logged ensemble metrics and plot to MLflow")
+        
     plt.show()
 
     return {
@@ -449,6 +478,14 @@ def test_noise_robustness(model, X_test, y_test, noise_levels=None):
 
     plt.tight_layout()
     plt.savefig('noise_robustness_test.png', dpi=300, bbox_inches='tight')
+    
+    # Log to MLflow
+    if mlflow.active_run():
+        mlflow.log_figure(fig, "noise_robustness_test.png")
+        mlflow.log_metric("robustness_score_10pct", robustness_score)
+        mlflow.log_metric("f2_at_10pct_noise", f2_at_10pct_noise)
+        print("  -> Logged robustness metrics and plot to MLflow")
+
     plt.show()
 
     return results
