@@ -32,8 +32,17 @@ Thumbs.db
 .vscode/
 .claude/
 
-# Project Specific
+# Archive and old files
+archive/
 old_scripts/
 old_notebooks/
 _ul
 _ul-NOUVEAU-MAITRE
+
+# Temporary utility scripts
+reorganize_repo.py
+fix_*.py
+validate_notebooks.py
+
+# Keep results/ for now (has metrics and visualizations to commit)
+# results/ will be partially tracked
