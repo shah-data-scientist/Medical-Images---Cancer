@@ -1,6 +1,6 @@
 # Documentation Policy - BrainScanAI
 
-**Inherits from:** `C:\Users\shahu\Documents\GLOBAL_DOCUMENTATION_POLICY.md`
+**Inherits from:** `C:\Users\shahu\Documents\GLOBAL_POLICY.md`
 
 **Last Updated:** 2025-12-26
 

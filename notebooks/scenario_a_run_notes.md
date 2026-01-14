@@ -10,10 +10,10 @@
 
 | Metric | Mean | Std | Range |
 |--------|------|-----|-------|
-| F2 | 0.9643 | 0.0322 | 0.9000-0.9804 |
-| Recall | 0.9800 | 0.0400 | - |
-| Precision | 0.9073 | 0.0036 | - |
-| Accuracy | 0.9400 | 0.0200 | - |
+| F2 | 0.8397 | 0.0428 | 0.8000-0.9000 |
+| Recall | 0.8400 | 0.0490 | - |
+| Precision | 0.8414 | 0.0439 | - |
+| Accuracy | 0.8400 | 0.0374 | - |
 
 **Interpretation:** Near-perfect baseline, low variance, 100% precision (zero false positives)
 
@@ -48,4 +48,4 @@
 ## Reproducibility
 
 **Seed:** 42 | **CV:** 5-fold stratified | **Files:** `features/features_pca_50.npy`, `features/weak_labels.csv`
-**Run ID:** f0777b6a1b0d4e43b6fcd37515d46cda | **Date:** 2025-12-29 02:26:02
+**Run ID:** bae8f8b77cae48c1b999580878cc8dbb | **Date:** 2026-01-13 20:16:50

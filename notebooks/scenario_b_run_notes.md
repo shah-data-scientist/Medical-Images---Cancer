@@ -11,9 +11,9 @@
 
 | Metric | Mean | Std | vs Baseline (A) |
 |--------|------|-----|-----------------|
-| F2 | 0.8929 | 0.0086 | -6.78% |
-| Recall | 0.9000 | 0.0000 | - |
-| Precision | 0.8673 | 0.0401 | - |
+| F2 | 0.8665 | 0.0410 | -6.78% |
+| Recall | 0.8600 | 0.0490 | - |
+| Precision | 0.8956 | 0.0054 | - |
 | Accuracy | 0.8800 | 0.0245 | - |
 
 **Interpretation:** Lower than baseline (noisy labels), low variance (stable), 100% precision maintained
@@ -49,4 +49,4 @@
 
 **Weak Labels:** `features/weak_labels_filtered.csv` (K-means K=2, training split only)
 **Seed:** 42 | **Phases:** 20 epochs supervised + 10 epochs semi-supervised
-**Run ID:** 80be931947a7400b9fd79409a36132d1 | **Date:** 2025-12-29 02:26:15
+**Run ID:** 03685dbffbf0449280a255d827213dfb | **Date:** 2026-01-13 20:16:56

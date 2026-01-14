@@ -300,17 +300,50 @@ docs_generated/
 
 ## Version Information
 
-**Documentation Version:** 1.0.0
-**Generated:** 2025-12-28
-**Project State:** Post-commit c8ed0f4 + d5075c6
+**Documentation Version:** 2.0.0
+**Last Updated:** 2026-01-09
+**Project State:** Post-reorganization (clean structure)
 
 **Code State:**
-- Notebooks: 3 (all executed successfully)
-- Scripts: 2 (both tested)
+- Notebooks: 3 (all executed successfully, rationalized versions in notebooks/)
+- Scripts: 2 (both tested, archived refactoring scripts in archive/)
 - Python Version: 3.11/3.12
 - Dependencies: 16 packages (Poetry-managed)
 
 **Production Readiness:** 9.2/10 (see POST_COMMIT_AUDIT_2025-12-28.md)
+
+**Repository Organization:**
+- Root: Essential files only (README, PROJECT_MEMORY, PRESENTATION)
+- docs_generated/: Current documentation (13 files)
+- archive/: Historical artifacts (notebooks, scripts, old docs)
+- notebooks/: Rationalized working notebooks (3 files)
+
+---
+
+## Archive Structure
+
+**Location:** `archive/` directory (historical artifacts, no longer needed for current work)
+
+### Archived Notebooks
+- Original notebooks (before rationalization): `archive/1_feature_extraction.ipynb`, etc.
+- Backup notebooks: `archive/backups/` (ORIGINAL and PRE_MLFLOW_REFACTOR versions)
+
+### Archived Documentation
+- Refactoring reports: `archive/docs/MLFLOW_REFACTORING_PLAN.md`, `REFACTORING_COMPLETE_SUMMARY.md`
+- Duplicate removal logs: `archive/docs/DUPLICATE_REMOVAL_*.md`, `DELETION_LOG.md`
+- Comparison reports: `archive/docs/BEFORE_AFTER_*.md`, `REORGANIZATION_SUMMARY.md`
+- Process logs: `archive/docs/scenario_*.txt`, `*_SUMMARY.txt`
+
+### Archived Scripts
+- Refactoring tools: `archive/refactoring_scripts/` (19 Python scripts used for notebook processing)
+- These scripts were used for one-time refactoring tasks and are preserved for reference
+
+### Archived Policies
+- Old documentation: `archive/docs_old/` (superseded by current docs_generated/)
+- Git hooks: `archive/hooks/` (now configured globally)
+- Policies: `archive/policy/` (documentation standards)
+
+**Note:** Archive contents are preserved for historical reference but are not required for running the current project.
 
 ---
 

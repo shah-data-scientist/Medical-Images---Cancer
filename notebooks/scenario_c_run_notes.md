@@ -11,10 +11,10 @@
 
 | Metric | Mean | Std | vs A | vs B |
 |--------|------|-----|------|------|
-| F2 | 0.9284 | 0.0353 | TBD | TBD |
-| Recall | 0.9400 | 0.0490 | - | - |
-| Precision | 0.8885 | 0.0278 | - | - |
-| Accuracy | 0.9100 | 0.0200 | - | - |
+| F2 | 0.8565 | 0.0466 | TBD | TBD |
+| Recall | 0.8600 | 0.0490 | - | - |
+| Precision | 0.8436 | 0.0465 | - | - |
+| Accuracy | 0.8500 | 0.0447 | - | - |
 
 **Interpretation:** Competitive with baseline, higher variance (fold-sensitive), outperforms clustering
 
@@ -49,4 +49,4 @@
 
 **Phases:** 20+5+15 epochs | **Selection:** Confidence threshold ~0.8-0.9
 **Seed:** 42 | **CV:** 5-fold stratified | **Phase 1 saved and reused**
-**Run ID:** 9c2f5d21ec96431ba07fafde2e46ba5b | **Date:** 2025-12-29 02:26:57
+**Run ID:** 7efa54c7ffdb4d8f8ab2baf2199e9905 | **Date:** 2026-01-13 20:17:26
