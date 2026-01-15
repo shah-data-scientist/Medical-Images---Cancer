@@ -49,4 +49,4 @@
 
 **Weak Labels:** `features/weak_labels_filtered.csv` (K-means K=2, training split only)
 **Seed:** 42 | **Phases:** 20 epochs supervised + 10 epochs semi-supervised
-**Run ID:** 03685dbffbf0449280a255d827213dfb | **Date:** 2026-01-13 20:16:56
+**Run ID:** 626df2d7c78d4431ac8b4fcf2b7b6e19 | **Date:** 2026-01-15 10:54:45

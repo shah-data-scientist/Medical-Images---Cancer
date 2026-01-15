@@ -10,14 +10,11 @@ This script performs:
 """
 
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.manifold import TSNE
-from sklearn.inspection import permutation_importance
 from sklearn.metrics import fbeta_score, accuracy_score, precision_score, recall_score
 import json
-from pathlib import Path
 import mlflow
 
 # Set style
@@ -90,7 +87,7 @@ def analyze_feature_importance(model, X_test, y_test, n_repeats=30, random_state
 
     # Top 10 most important components
     top_10_indices = np.argsort(importances_mean)[-10:][::-1]
-    print(f"\nTop 10 most important components:")
+    print("\nTop 10 most important components:")
     for i, idx in enumerate(top_10_indices, 1):
         print(f"  {i}. Component {idx}: {importances_mean[idx]:.4f} ± {importances_std[idx]:.4f}")
 
@@ -237,7 +234,7 @@ def visualize_feature_space_tsne(X_train, y_train, X_test, y_test,
     if mlflow.active_run():
         mlflow.log_metric("tsne_centroid_distance", centroid_distance)
 
-    print(f"\nClass Separation Metrics:")
+    print("\nClass Separation Metrics:")
     print(f"  Distance between class centroids: {centroid_distance:.2f}")
     print(f"  Normal cluster std: {train_normal.std(axis=0).mean():.2f}")
     print(f"  Cancer cluster std: {train_cancer.std(axis=0).mean():.2f}")
@@ -297,7 +294,7 @@ def create_ensemble_predictions(fold_models, X_test, y_test):
     ensemble_recall = recall_score(y_test, ensemble_preds)
     ensemble_accuracy = accuracy_score(y_test, ensemble_preds)
 
-    print(f"\nEnsemble Results:")
+    print("\nEnsemble Results:")
     print(f"  F2 Score:    {ensemble_f2:.4f}")
     print(f"  Precision:   {ensemble_precision:.4f}")
     print(f"  Recall:      {ensemble_recall:.4f}")
@@ -316,7 +313,7 @@ def create_ensemble_predictions(fold_models, X_test, y_test):
     confident_mask = (ensemble_probs > 0.9) | (ensemble_probs < 0.1)
     uncertain_mask = (ensemble_probs >= 0.3) & (ensemble_probs <= 0.7)
 
-    print(f"\nPrediction Confidence:")
+    print("\nPrediction Confidence:")
     print(f"  High confidence predictions (>0.9 or <0.1): {confident_mask.sum()}/{len(y_test)}")
     print(f"  Uncertain predictions (0.3-0.7): {uncertain_mask.sum()}/{len(y_test)}")
 
@@ -442,7 +439,7 @@ def test_noise_robustness(model, X_test, y_test, noise_levels=None):
     f2_at_10pct_noise = results['f2_scores'][noise_levels.index(0.10)]
     robustness_score = f2_at_10pct_noise / baseline_f2
 
-    print(f"\nRobustness Metrics:")
+    print("\nRobustness Metrics:")
     print(f"  Baseline F2 (no noise):     {baseline_f2:.4f}")
     print(f"  F2 at 10% noise:            {f2_at_10pct_noise:.4f}")
     print(f"  Robustness score (ratio):   {robustness_score:.4f}")

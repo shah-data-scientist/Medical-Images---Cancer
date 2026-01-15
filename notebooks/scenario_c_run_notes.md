@@ -49,4 +49,4 @@
 
 **Phases:** 20+5+15 epochs | **Selection:** Confidence threshold ~0.8-0.9
 **Seed:** 42 | **CV:** 5-fold stratified | **Phase 1 saved and reused**
-**Run ID:** 7efa54c7ffdb4d8f8ab2baf2199e9905 | **Date:** 2026-01-13 20:17:26
+**Run ID:** c8319ed966554ab782623a029cb42287 | **Date:** 2026-01-15 10:55:10

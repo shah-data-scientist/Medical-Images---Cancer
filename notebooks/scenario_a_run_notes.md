@@ -48,4 +48,4 @@
 ## Reproducibility
 
 **Seed:** 42 | **CV:** 5-fold stratified | **Files:** `features/features_pca_50.npy`, `features/weak_labels.csv`
-**Run ID:** bae8f8b77cae48c1b999580878cc8dbb | **Date:** 2026-01-13 20:16:50
+**Run ID:** 7b0e42c213d74c20abd906ec40e4a691 | **Date:** 2026-01-15 10:54:35

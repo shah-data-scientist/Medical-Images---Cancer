@@ -1,8 +1,8 @@
 # Documentation Policy - BrainScanAI
 
-**Inherits from:** `C:\Users\shahu\Documents\GLOBAL_POLICY.md`
+**Inherits from:** `C:\Users\shahu\Documents\coding_agent_policies\GLOBAL_POLICY.md`
 
-**Last Updated:** 2025-12-26
+**Last Updated:** 2026-01-14
 
 ---
 
@@ -106,28 +106,33 @@ Each notebook must have:
 1. Update notebook with results
 2. Add findings to "Key Findings" section
 3. Update PROJECT_MEMORY.md with summary
-4. Update relevant .md files if needed (FINAL_REPORT.md, etc.)
+4. Update relevant .md files if needed (`PRESENTATION_LABELING_4M_IMAGES_EN.md`, etc.)
 
-### Before Commit
+### Before Commit (AUDIT REQUIRED)
 
+- **Audit Procedure:** Refer to `C:\Users\shahu\Documents\coding_agent_policies\AUDIT_PROCEDURES.md`
 - Verify notebook has "Key Findings" section
 - Verify findings match current results
 - Clear unnecessary outputs
 - Update PROJECT_MEMORY.md
+- Run local security checks (OWASP Top 10) as per Global Policy
 
 ---
 
 ## 📁 Documentation Files (This Repository)
 
-**Core Files:**
+**Core Files (MANDATORY):**
 - `README.md` - Project overview, setup
 - `PROJECT_MEMORY.md` - Consolidated change log (PRIMARY)
 - `DOCUMENTATION_POLICY.md` - This file (local policy)
 
-**Reports (as needed):**
-- `FINAL_REPORT.md` - Comprehensive results
-- `EXECUTIVE_SUMMARY.md` - High-level overview
-- `PRIORITY*_COMPLETE.md` - Milestone reports
+**Strategic Deliverables (STABLE):**
+- `PRESENTATION_LABELING_4M_IMAGES_EN.md` - Scaling strategy presentation
+- `docs_generated/preserved/LABELING_STRATEGY_BUDGET_ANALYSIS.md` - Budget feasibility analysis
+
+**Reports (OPTIONAL/PLANNED):**
+- `FINAL_REPORT.md` - Comprehensive results (to be generated)
+- `EXECUTIVE_SUMMARY.md` - High-level overview (to be generated)
 
 **Rule:** Don't create new report files for every change. Update PROJECT_MEMORY.md instead.
 
@@ -160,6 +165,7 @@ Each notebook must have:
 - [ ] Statistical significance reported (if applicable)
 - [ ] Outputs saved for key results
 - [ ] Summary cell explains implications
+- [ ] Pre-commit audit completed (Requirements + Security)
 
 ---
 
@@ -175,3 +181,4 @@ Each notebook must have:
 - Code documentation (docstrings)
 - Token optimization
 - Commit workflow
+- Audit & Security procedures
